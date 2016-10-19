@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+border: 5px solid black;
+} 
+</style>
+
+</head> 
+
+<h1> How much money do you spend on monthly bills? </h1> 
+<body bgcolor="#2ECCFA">
+
+<body>
+
+
+<p> <img src="money2.jpg" width="30%"  align="center" />
+
+
+<form  id="form1">
+
+<p>How much is your rent? <input type="text" id="bill1" /></p>
+
+
+
+<p>How much do you pay for renter's insurance? <input type="text" id="bill2" /></p>
+
+
+
+<p>Around how much is your gas bill? <input type="text" id="bill3" /></p> 
+
+<p>Around how much is your water bill? <input type="text" id="bill4" /></p> 
+
+<p>How much is your cable bill? <input type="text" id="bill5" /></p>
+
+<p>How much is your internet bill? <input type="text" id="bill6" /></p>
+
+<p>Around how much is your electric bill? <input type="text" id="bill7" /></p> 
+
+<p>How much is your cell phone bill? <input type="text" id="bill8" /></p>
+
+<p>How much is your car payment? <input type="text" id="bill9" /></p>
+
+<p>How much do you pay for car insurance? <input type="text" id="bill10" /></p>
+
+
+<p><input type="submit" value="Submit" /> 
+
+</form>
+
+<p id="bills"> <p>is the total amount of money that you spend monthly on your bills. </p>
+
+<script>
+
+// the following lines grab the input from the form and store it in variables
+    document.getElementById("form1").onsubmit=function() {
+    bill1 = parseInt(document.getElementById("bill1").value);
+    bill2 = parseInt(document.getElementById("bill2").value);
+    bill3 = parseInt(document.getElementById("bill3").value);
+    bill4 = parseInt(document.getElementById("bill4").value);
+    bill5 = parseInt(document.getElementById("bill5").value);
+    bill6 = parseInt(document.getElementById("bill6").value);
+    bill7 = parseInt(document.getElementById("bill7").value);
+    bill8 = parseInt(document.getElementById("bill8").value);
+    bill9 = parseInt(document.getElementById("bill9").value);
+    bill10 = parseInt(document.getElementById("bill10").value);
+    //Include each bill in an array
+   // billlist = [bill1, bill2, bill3, bill4, bill5, bill6, bill7, bill8, bill9, bill10];  
+    
+    //this loop goes through the array and determines the number in each
+
+   total = bill1+ bill2 + bill3 + bill4 + bill5 + bill6 + bill7 + bill8 + bill9 + bill10;
+   
+   document.getElementById("bills").innerHTML = total;
+   
+    
+return false; // required to not refresh the page; just leave this here
+}// end the submit function
+</script>
+
+
+
+</body>
+</html>
